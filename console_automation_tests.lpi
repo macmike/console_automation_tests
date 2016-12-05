@@ -35,7 +35,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="2">
       <Unit0>
         <Filename Value="console_automation_tests.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -48,16 +48,6 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ufrmShell"/>
       </Unit1>
-      <Unit2>
-        <Filename Value="ucmdlineautomation.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="uCmdLineAutomation"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="uprocessexecuter.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="uProcessExecuter"/>
-      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

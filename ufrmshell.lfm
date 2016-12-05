@@ -1,27 +1,27 @@
 object frmShell: TfrmShell
-  Left = 1956
-  Height = 470
-  Top = 70
+  Left = 1955
+  Height = 460
+  Top = 45
   Width = 864
   ActiveControl = edtInput
   Caption = 'Shell Automation'
-  ClientHeight = 470
+  ClientHeight = 460
   ClientWidth = 864
   LCLVersion = '1.6.2.0'
   object Panel1: TPanel
     Left = 448
-    Height = 470
+    Height = 460
     Top = 0
     Width = 416
     Align = alClient
     Caption = 'Panel1'
-    ClientHeight = 470
+    ClientHeight = 460
     ClientWidth = 416
     TabOrder = 0
     object edtInput: TEdit
       Left = 8
       Height = 27
-      Top = 436
+      Top = 426
       Width = 320
       Anchors = [akLeft, akRight, akBottom]
       OnKeyUp = edtInputKeyUp
@@ -30,7 +30,7 @@ object frmShell: TfrmShell
     object btnExec: TButton
       Left = 335
       Height = 25
-      Top = 436
+      Top = 426
       Width = 75
       Anchors = [akRight, akBottom]
       Caption = 'Send'
@@ -39,7 +39,7 @@ object frmShell: TfrmShell
     end
     object mmLog: TMemo
       Left = 8
-      Height = 385
+      Height = 375
       Top = 40
       Width = 395
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -79,22 +79,22 @@ object frmShell: TfrmShell
   end
   object Panel2: TPanel
     Left = 0
-    Height = 470
+    Height = 460
     Top = 0
     Width = 448
     Align = alLeft
-    ClientHeight = 470
+    ClientHeight = 460
     ClientWidth = 448
     TabOrder = 1
     object ScrollBox1: TScrollBox
       Left = 1
-      Height = 468
+      Height = 458
       Top = 1
       Width = 446
       HorzScrollBar.Page = 152
-      VertScrollBar.Page = 466
+      VertScrollBar.Page = 456
       Align = alClient
-      ClientHeight = 466
+      ClientHeight = 456
       ClientWidth = 429
       TabOrder = 0
       object GroupBox1: TGroupBox
@@ -107,7 +107,26 @@ object frmShell: TfrmShell
         ClientHeight = 123
         ClientWidth = 427
         TabOrder = 0
-        object RichMemo1: TRichMemo
+        object btnTest1: TButton
+          Left = 8
+          Height = 25
+          Top = 88
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest1Click
+          TabOrder = 0
+        end
+        object Label2: TLabel
+          Left = 352
+          Height = 15
+          Top = 96
+          Width = 65
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux, Mac'
+          ParentColor = False
+        end
+        object RichMemo1: TMemo
           Left = 8
           Height = 72
           Top = 8
@@ -120,28 +139,7 @@ object frmShell: TfrmShell
             'send input: <password>'
             'expect: reprompt if wrong password, directory contents if correct'
           )
-          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 R\f0\fs18 un: \f0\fs18\b sudo ls\f0\fs18\b  -al \f0\fs18\b0 (via /bin/sh or similar)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 expect: interception of prompt \f0\fs18\b [sudo] passsword for <user>:\f0\fs18\b0 \par \f0\fs18 \pard\li0\sl200\slmult1 send input: <password>\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 expect: reprompt if wrong password, directory contents if correct\f0\fs18 \par }'
-          TabOrder = 0
-          ZoomFactor = 1
-        end
-        object btnTest1: TButton
-          Left = 8
-          Height = 25
-          Top = 88
-          Width = 75
-          Anchors = [akLeft, akBottom]
-          Caption = 'Run Test'
-          OnClick = btnTest1Click
           TabOrder = 1
-        end
-        object Label2: TLabel
-          Left = 352
-          Height = 15
-          Top = 96
-          Width = 65
-          Anchors = [akRight, akBottom]
-          Caption = 'Linux, Mac'
-          ParentColor = False
         end
       end
       object GroupBox2: TGroupBox
@@ -154,7 +152,26 @@ object frmShell: TfrmShell
         ClientHeight = 93
         ClientWidth = 427
         TabOrder = 1
-        object RichMemo2: TRichMemo
+        object btnTest2: TButton
+          Left = 8
+          Height = 25
+          Top = 58
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest2Click
+          TabOrder = 0
+        end
+        object Label4: TLabel
+          Left = 352
+          Height = 15
+          Top = 66
+          Width = 65
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux, Mac'
+          ParentColor = False
+        end
+        object RichMemo2: TMemo
           Left = 8
           Height = 42
           Top = 8
@@ -165,28 +182,7 @@ object frmShell: TfrmShell
             'Run: test_sudo.sh (provided in the project folder)'
             'exactly the same as above'
           )
-          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 R\f0\fs18 un: \f0\fs18\b test_sudo.sh\f0\fs18\b0  (provided in the project folder)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 exactly the same as above}'
-          TabOrder = 0
-          ZoomFactor = 1
-        end
-        object btnTest2: TButton
-          Left = 8
-          Height = 25
-          Top = 58
-          Width = 75
-          Anchors = [akLeft, akBottom]
-          Caption = 'Run Test'
-          OnClick = btnTest2Click
           TabOrder = 1
-        end
-        object Label4: TLabel
-          Left = 352
-          Height = 15
-          Top = 66
-          Width = 65
-          Anchors = [akRight, akBottom]
-          Caption = 'Linux, Mac'
-          ParentColor = False
         end
       end
       object GroupBox3: TGroupBox
@@ -199,7 +195,26 @@ object frmShell: TfrmShell
         ClientHeight = 128
         ClientWidth = 427
         TabOrder = 2
-        object RichMemo3: TRichMemo
+        object btnTest3: TButton
+          Left = 8
+          Height = 25
+          Top = 93
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest3Click
+          TabOrder = 0
+        end
+        object Label3: TLabel
+          Left = 352
+          Height = 15
+          Top = 101
+          Width = 65
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux, Mac'
+          ParentColor = False
+        end
+        object RichMemo3: TMemo
           Left = 8
           Height = 77
           Top = 8
@@ -212,28 +227,7 @@ object frmShell: TfrmShell
             'Expect: passphrase prompt (twice)'
             'Expect: output ssh key in memo'
           )
-          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 Run: \f0\fs18\b ssh-keygen -t rsa -C <email address> \f0\fs18\b0 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: filename prompt (enter for default)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: passphrase prompt (twice)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: output ssh key\f0\fs18  in memo}'
-          TabOrder = 0
-          ZoomFactor = 1
-        end
-        object btnTest3: TButton
-          Left = 8
-          Height = 25
-          Top = 93
-          Width = 75
-          Anchors = [akLeft, akBottom]
-          Caption = 'Run Test'
-          OnClick = btnTest3Click
           TabOrder = 1
-        end
-        object Label3: TLabel
-          Left = 352
-          Height = 15
-          Top = 101
-          Width = 65
-          Anchors = [akRight, akBottom]
-          Caption = 'Linux, Mac'
-          ParentColor = False
         end
       end
       object GroupBox4: TGroupBox
@@ -246,7 +240,26 @@ object frmShell: TfrmShell
         ClientHeight = 120
         ClientWidth = 427
         TabOrder = 3
-        object RichMemo4: TRichMemo
+        object btnTest4: TButton
+          Left = 8
+          Height = 25
+          Top = 85
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest4Click
+          TabOrder = 0
+        end
+        object Label5: TLabel
+          Left = 384
+          Height = 15
+          Top = 85
+          Width = 33
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux'
+          ParentColor = False
+        end
+        object RichMemo4: TMemo
           Left = 8
           Height = 69
           Top = 8
@@ -259,28 +272,7 @@ object frmShell: TfrmShell
             'Expect: confirmation of install (maybe)'
             'Expect: installed app'
           )
-          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 R\f0\fs18 un: \f0\fs18\b sudo apt-get install leafpad\f0\fs18\b0 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: \f0\fs18 sudo password prompt\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: \f0\fs18 confirmation of install (maybe)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: installed app}'
-          TabOrder = 0
-          ZoomFactor = 1
-        end
-        object btnTest4: TButton
-          Left = 8
-          Height = 25
-          Top = 85
-          Width = 75
-          Anchors = [akLeft, akBottom]
-          Caption = 'Run Test'
-          OnClick = btnTest4Click
           TabOrder = 1
-        end
-        object Label5: TLabel
-          Left = 384
-          Height = 15
-          Top = 85
-          Width = 33
-          Anchors = [akRight, akBottom]
-          Caption = 'Linux'
-          ParentColor = False
         end
       end
       object GroupBox5: TGroupBox
@@ -293,22 +285,6 @@ object frmShell: TfrmShell
         ClientHeight = 104
         ClientWidth = 427
         TabOrder = 4
-        object RichMemo5: TRichMemo
-          Left = 8
-          Height = 53
-          Top = 8
-          Width = 409
-          Anchors = [akTop, akLeft, akRight, akBottom]
-          HideSelection = False
-          Lines.Strings = (
-            'Run: nano '
-            'Can you capture the nano output that gets sent to terminal?'
-            'Do not worry about sending keys.'
-          )
-          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 Run: \f0\fs18\b nano\f0\fs18\b0  \f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Can you capture the nano output that gets sent to terminal?\par \pard\li0\sl200\slmult1 Do not worry about sending keys.}'
-          TabOrder = 0
-          ZoomFactor = 1
-        end
         object btnTest7: TButton
           Left = 8
           Height = 25
@@ -317,7 +293,7 @@ object frmShell: TfrmShell
           Anchors = [akLeft, akBottom]
           Caption = 'Run Test'
           OnClick = btnTest7Click
-          TabOrder = 1
+          TabOrder = 0
         end
         object Label6: TLabel
           Left = 352
@@ -327,6 +303,20 @@ object frmShell: TfrmShell
           Anchors = [akRight, akBottom]
           Caption = 'Linux, Mac'
           ParentColor = False
+        end
+        object RichMemo5: TMemo
+          Left = 8
+          Height = 53
+          Top = 8
+          Width = 424
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: nano '
+            'Can you capture the nano output that gets sent to terminal?'
+            'Do not worry about sending keys.'
+          )
+          TabOrder = 1
         end
       end
       object GroupBox6: TGroupBox
@@ -339,24 +329,6 @@ object frmShell: TfrmShell
         ClientHeight = 136
         ClientWidth = 427
         TabOrder = 5
-        object RichMemo6: TRichMemo
-          Left = 8
-          Height = 85
-          Top = 8
-          Width = 409
-          Anchors = [akTop, akLeft, akRight, akBottom]
-          HideSelection = False
-          Lines.Strings = (
-            'Run: ftp '
-            'Capture ">"'
-            'Send "?"'
-            'Capture list of commands'
-            'Send "quit"'
-          )
-          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 Run: \f0\fs18\b ftp\f0\fs18\b0  \f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Capture ">"\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Send "?"\par \pard\li0\sl200\slmult1 Capture list of commands\par \pard\li0\sl200\slmult1 Send "quit"}'
-          TabOrder = 0
-          ZoomFactor = 1
-        end
         object btnTest6: TButton
           Left = 8
           Height = 25
@@ -365,7 +337,7 @@ object frmShell: TfrmShell
           Anchors = [akLeft, akBottom]
           Caption = 'Run Test'
           OnClick = btnTest6Click
-          TabOrder = 1
+          TabOrder = 0
         end
         object Label7: TLabel
           Left = 321
@@ -375,6 +347,22 @@ object frmShell: TfrmShell
           Anchors = [akRight, akBottom]
           Caption = 'Linux, Mac, Win'
           ParentColor = False
+        end
+        object RichMemo6: TMemo
+          Left = 8
+          Height = 85
+          Top = 8
+          Width = 424
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: ftp '
+            'Capture ">"'
+            'Send "?"'
+            'Capture list of commands'
+            'Send "quit"'
+          )
+          TabOrder = 1
         end
       end
       object GroupBox7: TGroupBox
@@ -387,23 +375,6 @@ object frmShell: TfrmShell
         ClientHeight = 120
         ClientWidth = 427
         TabOrder = 6
-        object RichMemo7: TRichMemo
-          Left = 8
-          Height = 69
-          Top = 8
-          Width = 409
-          Anchors = [akTop, akLeft, akRight, akBottom]
-          HideSelection = False
-          Lines.Strings = (
-            'Run: brew cask install sublime-text'
-            'Expect: sudo password prompt'
-            'Expect: installed app'
-            '(note: needs brew installed)'
-          )
-          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 R\f0\fs18 un: \f0\fs18\b brew cask install sublime-text\f0\fs18\b0 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: \f0\fs18 sudo password prompt\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: installed app\f0\fs18 \par \pard\li0\sl200\slmult1 (note: needs brew installed)}'
-          TabOrder = 0
-          ZoomFactor = 1
-        end
         object btnTest5: TButton
           Left = 8
           Height = 25
@@ -412,7 +383,7 @@ object frmShell: TfrmShell
           Anchors = [akLeft, akBottom]
           Caption = 'Run Test'
           OnClick = btnTest5Click
-          TabOrder = 1
+          TabOrder = 0
         end
         object Label8: TLabel
           Left = 393
@@ -422,6 +393,21 @@ object frmShell: TfrmShell
           Anchors = [akRight, akBottom]
           Caption = 'Mac'
           ParentColor = False
+        end
+        object RichMemo7: TMemo
+          Left = 8
+          Height = 69
+          Top = 8
+          Width = 424
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: brew cask install sublime-text'
+            'Expect: sudo password prompt'
+            'Expect: installed app'
+            '(note: needs brew installed)'
+          )
+          TabOrder = 1
         end
       end
     end
