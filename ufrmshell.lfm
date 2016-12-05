@@ -1,0 +1,429 @@
+object frmShell: TfrmShell
+  Left = 1956
+  Height = 470
+  Top = 70
+  Width = 864
+  ActiveControl = edtInput
+  Caption = 'Shell Automation'
+  ClientHeight = 470
+  ClientWidth = 864
+  LCLVersion = '1.6.2.0'
+  object Panel1: TPanel
+    Left = 448
+    Height = 470
+    Top = 0
+    Width = 416
+    Align = alClient
+    Caption = 'Panel1'
+    ClientHeight = 470
+    ClientWidth = 416
+    TabOrder = 0
+    object edtInput: TEdit
+      Left = 8
+      Height = 27
+      Top = 436
+      Width = 320
+      Anchors = [akLeft, akRight, akBottom]
+      OnKeyUp = edtInputKeyUp
+      TabOrder = 0
+    end
+    object btnExec: TButton
+      Left = 335
+      Height = 25
+      Top = 436
+      Width = 75
+      Anchors = [akRight, akBottom]
+      Caption = 'Send'
+      OnClick = btnExecClick
+      TabOrder = 1
+    end
+    object mmLog: TMemo
+      Left = 8
+      Height = 385
+      Top = 40
+      Width = 395
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Lines.Strings = (
+        ''
+      )
+      ScrollBars = ssAutoBoth
+      TabOrder = 2
+    end
+    object edtWorkingDir: TEdit
+      Left = 88
+      Height = 27
+      Top = 8
+      Width = 240
+      Anchors = [akTop, akLeft, akRight]
+      OnKeyUp = edtInputKeyUp
+      TabOrder = 3
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 15
+      Top = 13
+      Width = 73
+      Caption = 'Working dir:'
+      ParentColor = False
+    end
+    object btnSetWorkingDir: TButton
+      Left = 335
+      Height = 25
+      Top = 8
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Set'
+      OnClick = btnExecClick
+      TabOrder = 4
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 470
+    Top = 0
+    Width = 448
+    Align = alLeft
+    ClientHeight = 470
+    ClientWidth = 448
+    TabOrder = 1
+    object ScrollBox1: TScrollBox
+      Left = 1
+      Height = 468
+      Top = 1
+      Width = 446
+      HorzScrollBar.Page = 152
+      VertScrollBar.Page = 466
+      Align = alClient
+      ClientHeight = 466
+      ClientWidth = 429
+      TabOrder = 0
+      object GroupBox1: TGroupBox
+        Left = 0
+        Height = 139
+        Top = 0
+        Width = 429
+        Align = alTop
+        Caption = ' Test 1 : sudo '
+        ClientHeight = 123
+        ClientWidth = 427
+        TabOrder = 0
+        object RichMemo1: TRichMemo
+          Left = 8
+          Height = 72
+          Top = 8
+          Width = 409
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: sudo ls -al (via /bin/sh or similar)'
+            'expect: interception of prompt [sudo] passsword for <user>:'
+            'send input: <password>'
+            'expect: reprompt if wrong password, directory contents if correct'
+          )
+          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 R\f0\fs18 un: \f0\fs18\b sudo ls\f0\fs18\b  -al \f0\fs18\b0 (via /bin/sh or similar)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 expect: interception of prompt \f0\fs18\b [sudo] passsword for <user>:\f0\fs18\b0 \par \f0\fs18 \pard\li0\sl200\slmult1 send input: <password>\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 expect: reprompt if wrong password, directory contents if correct\f0\fs18 \par }'
+          TabOrder = 0
+          ZoomFactor = 1
+        end
+        object btnTest1: TButton
+          Left = 8
+          Height = 25
+          Top = 88
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest1Click
+          TabOrder = 1
+        end
+        object Label2: TLabel
+          Left = 352
+          Height = 15
+          Top = 96
+          Width = 65
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux, Mac'
+          ParentColor = False
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 0
+        Height = 109
+        Top = 139
+        Width = 429
+        Align = alTop
+        Caption = ' Test 2 : sudo_test.sh'
+        ClientHeight = 93
+        ClientWidth = 427
+        TabOrder = 1
+        object RichMemo2: TRichMemo
+          Left = 8
+          Height = 42
+          Top = 8
+          Width = 409
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: test_sudo.sh (provided in the project folder)'
+            'exactly the same as above'
+          )
+          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 R\f0\fs18 un: \f0\fs18\b test_sudo.sh\f0\fs18\b0  (provided in the project folder)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 exactly the same as above}'
+          TabOrder = 0
+          ZoomFactor = 1
+        end
+        object btnTest2: TButton
+          Left = 8
+          Height = 25
+          Top = 58
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest2Click
+          TabOrder = 1
+        end
+        object Label4: TLabel
+          Left = 352
+          Height = 15
+          Top = 66
+          Width = 65
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux, Mac'
+          ParentColor = False
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 0
+        Height = 144
+        Top = 248
+        Width = 429
+        Align = alTop
+        Caption = ' Test 3 : ssh-keygen '
+        ClientHeight = 128
+        ClientWidth = 427
+        TabOrder = 2
+        object RichMemo3: TRichMemo
+          Left = 8
+          Height = 77
+          Top = 8
+          Width = 409
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: ssh-keygen -t rsa -C <email address> '
+            'Expect: filename prompt (enter for default)'
+            'Expect: passphrase prompt (twice)'
+            'Expect: output ssh key in memo'
+          )
+          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 Run: \f0\fs18\b ssh-keygen -t rsa -C <email address> \f0\fs18\b0 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: filename prompt (enter for default)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: passphrase prompt (twice)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: output ssh key\f0\fs18  in memo}'
+          TabOrder = 0
+          ZoomFactor = 1
+        end
+        object btnTest3: TButton
+          Left = 8
+          Height = 25
+          Top = 93
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest3Click
+          TabOrder = 1
+        end
+        object Label3: TLabel
+          Left = 352
+          Height = 15
+          Top = 101
+          Width = 65
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux, Mac'
+          ParentColor = False
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 0
+        Height = 136
+        Top = 392
+        Width = 429
+        Align = alTop
+        Caption = ' Test 4 : install software (Linux) '
+        ClientHeight = 120
+        ClientWidth = 427
+        TabOrder = 3
+        object RichMemo4: TRichMemo
+          Left = 8
+          Height = 69
+          Top = 8
+          Width = 409
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: sudo apt-get install leafpad'
+            'Expect: sudo password prompt'
+            'Expect: confirmation of install (maybe)'
+            'Expect: installed app'
+          )
+          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 R\f0\fs18 un: \f0\fs18\b sudo apt-get install leafpad\f0\fs18\b0 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: \f0\fs18 sudo password prompt\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: \f0\fs18 confirmation of install (maybe)\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: installed app}'
+          TabOrder = 0
+          ZoomFactor = 1
+        end
+        object btnTest4: TButton
+          Left = 8
+          Height = 25
+          Top = 85
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest4Click
+          TabOrder = 1
+        end
+        object Label5: TLabel
+          Left = 384
+          Height = 15
+          Top = 85
+          Width = 33
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux'
+          ParentColor = False
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 0
+        Height = 120
+        Top = 816
+        Width = 429
+        Align = alTop
+        Caption = ' Test 7: Nano (Linux)'
+        ClientHeight = 104
+        ClientWidth = 427
+        TabOrder = 4
+        object RichMemo5: TRichMemo
+          Left = 8
+          Height = 53
+          Top = 8
+          Width = 409
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: nano '
+            'Can you capture the nano output that gets sent to terminal?'
+            'Do not worry about sending keys.'
+          )
+          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 Run: \f0\fs18\b nano\f0\fs18\b0  \f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Can you capture the nano output that gets sent to terminal?\par \pard\li0\sl200\slmult1 Do not worry about sending keys.}'
+          TabOrder = 0
+          ZoomFactor = 1
+        end
+        object btnTest7: TButton
+          Left = 8
+          Height = 25
+          Top = 69
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest7Click
+          TabOrder = 1
+        end
+        object Label6: TLabel
+          Left = 352
+          Height = 15
+          Top = 72
+          Width = 65
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux, Mac'
+          ParentColor = False
+        end
+      end
+      object GroupBox6: TGroupBox
+        Left = 0
+        Height = 152
+        Top = 664
+        Width = 429
+        Align = alTop
+        Caption = ' Test 6 : ftp'
+        ClientHeight = 136
+        ClientWidth = 427
+        TabOrder = 5
+        object RichMemo6: TRichMemo
+          Left = 8
+          Height = 85
+          Top = 8
+          Width = 409
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: ftp '
+            'Capture ">"'
+            'Send "?"'
+            'Capture list of commands'
+            'Send "quit"'
+          )
+          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 Run: \f0\fs18\b ftp\f0\fs18\b0  \f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Capture ">"\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Send "?"\par \pard\li0\sl200\slmult1 Capture list of commands\par \pard\li0\sl200\slmult1 Send "quit"}'
+          TabOrder = 0
+          ZoomFactor = 1
+        end
+        object btnTest6: TButton
+          Left = 8
+          Height = 25
+          Top = 101
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest6Click
+          TabOrder = 1
+        end
+        object Label7: TLabel
+          Left = 321
+          Height = 15
+          Top = 109
+          Width = 96
+          Anchors = [akRight, akBottom]
+          Caption = 'Linux, Mac, Win'
+          ParentColor = False
+        end
+      end
+      object GroupBox7: TGroupBox
+        Left = 0
+        Height = 136
+        Top = 528
+        Width = 429
+        Align = alTop
+        Caption = ' Test 5 : install software (Mac) '
+        ClientHeight = 120
+        ClientWidth = 427
+        TabOrder = 6
+        object RichMemo7: TRichMemo
+          Left = 8
+          Height = 69
+          Top = 8
+          Width = 409
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          HideSelection = False
+          Lines.Strings = (
+            'Run: brew cask install sublime-text'
+            'Expect: sudo password prompt'
+            'Expect: installed app'
+            '(note: needs brew installed)'
+          )
+          Rtf = '{\rtf1\ansi\ansicp1252\deff0\deflan1033{\fonttbl{\f0\fcharset0 Sans;}}{\colortbl;\red243\green243\blue245;}\f0\fs18\cf1 \pard\li0\sl200\slmult1 R\f0\fs18 un: \f0\fs18\b brew cask install sublime-text\f0\fs18\b0 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: \f0\fs18 sudo password prompt\f0\fs18 \par \f0\fs18 \pard\li0\sl200\slmult1 Expect: installed app\f0\fs18 \par \pard\li0\sl200\slmult1 (note: needs brew installed)}'
+          TabOrder = 0
+          ZoomFactor = 1
+        end
+        object btnTest5: TButton
+          Left = 8
+          Height = 25
+          Top = 85
+          Width = 75
+          Anchors = [akLeft, akBottom]
+          Caption = 'Run Test'
+          OnClick = btnTest5Click
+          TabOrder = 1
+        end
+        object Label8: TLabel
+          Left = 393
+          Height = 15
+          Top = 93
+          Width = 24
+          Anchors = [akRight, akBottom]
+          Caption = 'Mac'
+          ParentColor = False
+        end
+      end
+    end
+  end
+end

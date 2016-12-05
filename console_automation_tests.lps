@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="console_automation_tests.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="10"/>
+        <UsageCount Value="26"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="ufrmshell.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmShell"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmShell"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="37"/>
+        <CursorPos Y="62"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="ucmdlineautomation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uCmdLineAutomation"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="26"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="uprocessexecuter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uProcessExecuter"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="344"/>
+        <CursorPos X="86" Y="359"/>
+        <UsageCount Value="26"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/share/lazarus/1.6.2/lcl/asyncprocess.pp"/>
+        <UnitName Value="AsyncProcess"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="14" Y="48"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../../Dropbox/source/sp_common/utils/uprocessexecuter.pas"/>
+        <UnitName Value="uProcessExecuter"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="342"/>
+        <CursorPos X="5" Y="375"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../consolectl4/consolectrl.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../consolectl4/rwprocess.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="55" Column="21" TopLine="25"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="56" Column="21" TopLine="26"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="57" Column="21" TopLine="27"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="58" Column="21" TopLine="28"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="59" Column="21" TopLine="29"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="58" Column="21" TopLine="28"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="59" Column="21" TopLine="29"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="58" Column="21" TopLine="28"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="57" Column="21" TopLine="27"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="59" Column="21" TopLine="29"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="52" Column="92" TopLine="32"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="55" Column="92" TopLine="35"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="58" Column="92" TopLine="38"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="59" Column="92" TopLine="39"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="60" Column="92" TopLine="40"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="61" Column="92" TopLine="41"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="65" Column="92" TopLine="45"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="66" Column="92" TopLine="46"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="71" Column="92" TopLine="51"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="97" TopLine="64"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="101" TopLine="68"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="116" TopLine="68"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="102" Column="3" TopLine="69"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="128" TopLine="77"/>
+      </Position24>
+      <Position25>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="114" Column="3" TopLine="83"/>
+      </Position25>
+      <Position26>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="120" Column="3" TopLine="89"/>
+      </Position26>
+      <Position27>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="126" Column="3" TopLine="95"/>
+      </Position27>
+      <Position28>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="132" Column="3" TopLine="101"/>
+      </Position28>
+      <Position29>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="108" Column="44" TopLine="75"/>
+      </Position29>
+      <Position30>
+        <Filename Value="ufrmshell.pas"/>
+        <Caret Line="109" TopLine="83"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
