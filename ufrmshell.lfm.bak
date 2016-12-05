@@ -1,27 +1,27 @@
 object frmShell: TfrmShell
   Left = 1955
-  Height = 470
+  Height = 460
   Top = 45
   Width = 864
   ActiveControl = edtInput
   Caption = 'Shell Automation'
-  ClientHeight = 470
+  ClientHeight = 460
   ClientWidth = 864
   LCLVersion = '1.6.2.0'
   object Panel1: TPanel
     Left = 448
-    Height = 470
+    Height = 460
     Top = 0
     Width = 416
     Align = alClient
     Caption = 'Panel1'
-    ClientHeight = 470
+    ClientHeight = 460
     ClientWidth = 416
     TabOrder = 0
     object edtInput: TEdit
       Left = 8
       Height = 27
-      Top = 436
+      Top = 426
       Width = 320
       Anchors = [akLeft, akRight, akBottom]
       OnKeyUp = edtInputKeyUp
@@ -30,7 +30,7 @@ object frmShell: TfrmShell
     object btnExec: TButton
       Left = 335
       Height = 25
-      Top = 436
+      Top = 426
       Width = 75
       Anchors = [akRight, akBottom]
       Caption = 'Send'
@@ -39,7 +39,7 @@ object frmShell: TfrmShell
     end
     object mmLog: TMemo
       Left = 8
-      Height = 385
+      Height = 375
       Top = 40
       Width = 395
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -73,28 +73,28 @@ object frmShell: TfrmShell
       Width = 75
       Anchors = [akTop, akRight]
       Caption = 'Set'
-      OnClick = btnSetWorkingDirClick
+      OnClick = btnExecClick
       TabOrder = 4
     end
   end
   object Panel2: TPanel
     Left = 0
-    Height = 470
+    Height = 460
     Top = 0
     Width = 448
     Align = alLeft
-    ClientHeight = 470
+    ClientHeight = 460
     ClientWidth = 448
     TabOrder = 1
     object ScrollBox1: TScrollBox
       Left = 1
-      Height = 468
+      Height = 458
       Top = 1
       Width = 446
       HorzScrollBar.Page = 152
-      VertScrollBar.Page = 466
+      VertScrollBar.Page = 456
       Align = alClient
-      ClientHeight = 466
+      ClientHeight = 456
       ClientWidth = 429
       TabOrder = 0
       object GroupBox1: TGroupBox

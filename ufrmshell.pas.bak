@@ -51,7 +51,6 @@ type
     RichMemo7: TMemo;
     ScrollBox1: TScrollBox;
     procedure btnExecClick(Sender: TObject);
-    procedure btnSetWorkingDirClick(Sender: TObject);
     procedure btnTest1Click(Sender: TObject);
     procedure btnTest2Click(Sender: TObject);
     procedure btnTest3Click(Sender: TObject);
@@ -107,11 +106,6 @@ end;
 procedure TfrmShell.btnExecClick(Sender: TObject);
 begin
   //proc.SendInput(edtInput.Text);
-end;
-
-procedure TfrmShell.btnSetWorkingDirClick(Sender: TObject);
-begin
-  //proc.SetWorkingDir
 end;
 
 procedure TfrmShell.btnTest1Click(Sender: TObject);
