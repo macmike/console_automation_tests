@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, RichMemo;
+  ExtCtrls, ScriptExecutor;
 
 type
 
@@ -59,9 +59,16 @@ type
     procedure btnTest5Click(Sender: TObject);
     procedure btnTest6Click(Sender: TObject);
     procedure btnTest7Click(Sender: TObject);
+    procedure edtInputChange(Sender: TObject);
     procedure edtInputKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
   private
-
+    proc : TScriptExecutor;
+    FIsRunning : boolean;
+    procedure ExecCommand(const cmd : string);
+    procedure OnFinish(Sender: TObject);
+    procedure OnOutput(sender: Tobject; const s: string);
+    procedure OnStart(Sender: TObject);
   public
     { public declarations }
   end;
@@ -104,57 +111,109 @@ begin
     btnExecClick(Sender);
 end;
 
-procedure TfrmShell.btnExecClick(Sender: TObject);
+procedure TfrmShell.FormCreate(Sender: TObject);
 begin
-  //proc.SendInput(edtInput.Text);
+
+  proc:=TScriptExecutor.Create;
+  proc.OnOutput:=@OnOutput;
+  proc.OnError:=@OnOutput;
+  proc.OnStart:=@OnStart;
+  proc.OnFinish:=@OnFinish;
+
+  edtWorkingDir.Text := ExtractFileDir(Application.ExeName);
+  btnSetWorkingDirClick(Sender);
+  OnOutput(Self,'$ ');
+
 end;
 
-procedure TfrmShell.btnSetWorkingDirClick(Sender: TObject);
+procedure TfrmShell.ExecCommand(const cmd: string);
 begin
-  //proc.SetWorkingDir
+  OnOutput(Self,cmd);
+  OnOutput(Self,LineEnding);
+  proc.Command := cmd;
+end;
+
+procedure TfrmShell.OnOutput(sender: Tobject; const s: string);
+begin
+  try
+    //if (sender = self) then
+    //begin
+    //  mmLog.Lines.Add('');
+    //  mmLog.Lines.Add('----------');
+    //  mmLog.Text:=mmLog.Text+s;
+    //  mmLog.Lines.Add('');
+    //end
+    //else
+       mmLog.Text:=mmLog.Text+s;
+
+    mmLog.SelStart:=mmLog.GetTextLen;
+  finally
+  end;
+end;
+
+procedure TfrmShell.OnFinish(Sender: TObject);
+begin
+  FIsRunning:=false;
+  OnOutput(Self,'$ ');
+end;
+
+procedure TfrmShell.OnStart(Sender: TObject);
+begin
+  FIsRunning := true;
+end;
+
+procedure TfrmShell.btnExecClick(Sender: TObject);
+begin
+  if FIsRunning then
+    proc.SendInput(edtInput.Text)
+  else
+    ExecCommand(edtInput.Text);
 end;
 
 procedure TfrmShell.btnTest1Click(Sender: TObject);
 begin
-  //proc.Command := 'sudo ls';
+  ExecCommand('sudo ls');
+end;
+
+procedure TfrmShell.btnSetWorkingDirClick(Sender: TObject);
+begin
+  proc.WorkDir:=edtWorkingDir.Text;
 end;
 
 procedure TfrmShell.btnTest2Click(Sender: TObject);
 begin
-  //proc.Command := 'test_sudo.sh';
+  ExecCommand('./test_sudo.sh');
 end;
 
 procedure TfrmShell.btnTest3Click(Sender: TObject);
 begin
-  //proc.Command := 'ssh-keygen -t rsa -C testy@example.com';
+  ExecCommand('ssh-keygen -t rsa -C testy@example.com');
 end;
 
 procedure TfrmShell.btnTest4Click(Sender: TObject);
 begin
-  //proc.Command := 'sudo apt-get install leafpad';
+  ExecCommand('sudo apt-get install leafpad');
 end;
 
 procedure TfrmShell.btnTest5Click(Sender: TObject);
 begin
-  //proc.Command := 'brew cask install sublime-text';
+  ExecCommand('brew cask install sublime-text');
 end;
 
 procedure TfrmShell.btnTest6Click(Sender: TObject);
 begin
-  //proc.Command := 'ftp';
+  ExecCommand('ftp');
 end;
 
 procedure TfrmShell.btnTest7Click(Sender: TObject);
 begin
-  //proc.Command := 'nano';
-
+  ExecCommand('nano');
 end;
 
-
-
-
-
-
+procedure TfrmShell.edtInputChange(Sender: TObject);
+begin
+  proc.WorkDir:=edtWorkingDir.Text;
+end;
 
 end.
 
